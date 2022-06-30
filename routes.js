@@ -1,3 +1,7 @@
+const { sampleHandler } = require("./handlers/routeHandlers/sampleHandler");
+
 const routes = {
-    'sample' : ''
+  sample: sampleHandler,
 };
+
+module.exports = routes;
