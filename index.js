@@ -10,6 +10,8 @@ app.config = {
   port: 3000,
 };
 
+const { handleReqRes } = require("./helpers/handleReqRes");
+
 app.createServer = () => {
   const server = http.createServer(app.handleReqRes);
   server.listen(app.config.port, () => {
@@ -17,8 +19,6 @@ app.createServer = () => {
   });
 };
 
-app.handleReqRes = (req, res) => {
-  res.end("hello world!");
-};
+app.handleReqRes = handleReqRes;
 
 app.createServer();
